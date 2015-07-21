@@ -9,18 +9,19 @@
     </body>
 
 <template name="leaderboard">
-  {{#each player}} 
+  {{#each player}}
       <li class="player {{selectedClass}}"> {{name}}:{{score}}</li>
   {{/each}}<br/>
     <input type="button" class="increment btn btn-primary" value="Give 5 Points!">
     <input type="button" class="decrement  btn btn-danger" value="Take 5 Points!">
+    <input type="button" class="remove" value="Remove player">
     <br/><br/>
     {{> addPlayers}}
 </template>
 <!--leaderboard template ends : D-->
 
 <template name="addPlayers">
-  <form class="form">
+  <form>
     <input type="text" name="playerName">
     <input type="submit" value="addPlayer">
   </form>
